@@ -8,6 +8,9 @@ project "ChaiScript"
         flags "C++14"
 
         if os.is( "windows" ) == false then
-            links "pthread"
+            links {
+                "pthread",
+                "dl"
+            }
         end
     ]]
