@@ -7,4 +7,4 @@ premake5 gmake
 
 make 
 
-./bin/Test/Libsimdpp
+./bin/Test/ChaiScript
