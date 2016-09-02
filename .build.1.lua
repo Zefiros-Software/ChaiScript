@@ -6,4 +6,8 @@ project "ChaiScript"
     zpm.export [[
         includedirs "include/"
         flags "C++14"
+
+        if os.is( "windows" ) == false then
+            links "pthread"
+        end
     ]]
