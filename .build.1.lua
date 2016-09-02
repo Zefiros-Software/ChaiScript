@@ -12,5 +12,7 @@ project "ChaiScript"
                 "pthread",
                 "dl"
             }
+        else
+            buildoptions "/bigobj"
         end
     ]]
