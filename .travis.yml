@@ -4,7 +4,14 @@ matrix:
     include:
         # Use the built in venv for linux builds
         - os: linux
-          dist: trusty
+          dist: trusty          
+          env: VERSION=6
+        - os: linux
+          dist: trusty          
+          env: VERSION=7
+        - os: linux
+          dist: trusty          
+          env: VERSION=5
         # Use generic language for osx
         - os: osx
           osx_image: xcode8
@@ -14,3 +21,6 @@ install:
     - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm-travis.sh | bash
 script:
     - bash script/travis-build.sh
+notifications:
+    slack:
+        secure: "3FHKcZ9mImzAGmBbLeABfTc3+fagXfFL4NPLhYK4xKVHzM9vCVPBvV8uWapjQCcGg21XLzkzYSy8ePPB+ksUdmcCty0E+o9YHOJ/SKSzUfeEYrub8tQooya9PjEM9FpFQjTR+G8lqHzaNHphBOZGgShyjpHPv70EN7a1PzAfwPRtTpZF/kW+vw4xrbI1E/IB4W+vIhmivAkY1QXTw+l430P4VuPSxaZtArenoo7JOoS0caauMo4HVynJUtWZimr7NIV24TZaYGntOdRi1ZXb1V7zsc9NysMT/JEAEp6AZCDHL0LGEkMY5gaQ++xDwi7GO62rnMne7pMl2ZPrn/OuxW4EGh8TLdoDxno3xezyCSEeS+6jvBvJZwg/nAWP2LEZkwyOyvO9+j4g5kiQT5VovSmXsiL1UGdr7eP2oOOplGp42/u2AVZ9c8yqCYMw+m4BV0VqoE9CYF/D6x/NuSsVkqcVrfBtMsuvpG8LLvMuAU7U992PUu0MrSENE7VhMC225CEmHmWMAWGhVDrBCl3olngyIOyzu35kP+hCnY/5pv+Au8TwqObR9db70GsW8w3meFrGw6Cj5R5VxbmAMZlku2Nk7Q7fph5ReXyw6I/8/6J1FzagL4bnQveJESaZnbtnU+EURgpQWo1MnUa1/y/kql5QsYwneqaT4VHsTu/hKHc="
