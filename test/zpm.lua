@@ -10,6 +10,4 @@ workspace "ChaiScript"
         kind "ConsoleApp"
         files "main.cpp"
 
-        zpm.uses {
-            "Zefiros-Software/ChaiScript"
-        }
+        zpm.uses "Zefiros-Software/ChaiScript"

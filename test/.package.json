@@ -7,7 +7,8 @@
         },
         {
             "name": "Zefiros-Software/ChaiScript",
-            "version": "@head"
+            "version": "@head",
+            "buildpath": "../"
         }
     ]
 }
