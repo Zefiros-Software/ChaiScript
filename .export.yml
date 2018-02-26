@@ -8,12 +8,12 @@ export: |
           includedirs "include"
           cppdialect "C++14"
 
-          filter "system:windows"
+          filter "system:not windows"
               links {
                   "pthread",
                   "dl"
               }
-          filter "not system:windows"
+          filter "system:windows"
               buildoptions "/bigobj"
 
           filter {}
