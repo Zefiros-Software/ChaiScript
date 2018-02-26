@@ -26,7 +26,7 @@
 
 workspace "ChaiScript"
 
-    zefiros.setTestZPMDefaults( "ChaiScript" )
+    zefiros.testDefinition( "ChaiScript" )
 
     project "ChaiScript"
         zpm.uses "Zefiros-Software/ChaiScript"
