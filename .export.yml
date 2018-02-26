@@ -1,0 +1,20 @@
+version: ">=5.8.1 || @head"
+export: |
+  project "ChaiScript"
+
+      kind "StaticLib"
+
+      zpm.export [[
+          includedirs "include"
+          cppdialect "C++14"
+
+          filter "system:windows"
+              links {
+                  "pthread",
+                  "dl"
+              }
+          filter "not system:windows"
+              buildoptions "/bigobj"
+
+          filter {}
+      ]]
