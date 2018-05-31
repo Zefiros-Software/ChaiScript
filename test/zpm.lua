@@ -25,14 +25,8 @@
 -- ]]
 
 workspace "ChaiScript"
-   configurations { "Test" }
-   
-   architecture "x86_64"
-   
-   startproject "ChaiScript"
+
+    zefiros.testDefinition( "ChaiScript" )
 
     project "ChaiScript"
-        kind "ConsoleApp"
-        files "main.cpp"
-
         zpm.uses "Zefiros-Software/ChaiScript"
