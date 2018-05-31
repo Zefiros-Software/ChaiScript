@@ -4,9 +4,6 @@ matrix:
   include:
   - os: linux
     dist: trusty
-    env: VERSION=6
-  - os: linux
-    dist: trusty
     env: VERSION=7
   - os: osx
     osx_image: xcode9.2
@@ -14,11 +11,11 @@ matrix:
 global:
   env:
   - PROJECT=ChaiScript
-  - PROJECT_TEMPLATE=default
+  - PROJECT_TEMPLATE=latest
 install:
 - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
 - cd test && zpm run test-definition ChaiScript
 notifications:
   slack:
-    secure: BeM33omC0S8M+AjnBz60Q5NR+oPNpZcnpCs34yF+ZKwxUUNrufsBqEQre+HKJ49oi9qf2VNoXexg8XUXhn6PIS+otdNe4M/SYBx0peTsCwj3fzbKytu5yi5yEiRSfx5zisWd0sCOXXjsD0+qoiUrkfxMojeo/Tc00U7BKFzKFLmVff0FD0fGuwHnWCYlyHE9ipB8OGqEHXz9H7z3s/78Vgfr5QDU44UeynCbnl5juP6hirZvQaOF0TTapALaraeIwBOaGD57zMUdFPoMIS7qjZM3v0Aa/xgT3fdrmox/KSWqEm2l7c9O/h9DmmQmdUnY7jX2e58yeDh+l6F9v++3lME3BHdqBJUj1yFaE2L/Em32c+P70a8I6wUKILXKd14UNzNSONrxNz47o3dll7vrVTFzsqjlUQU7x6QCOtewaKMZyXVSqGqqyMZ9OubUniqKa/z7wLWrgnzL55SDZ1kGl5QMQm/xfjtk2ETfh0dDb+HoJRdijVAdp8Cy1RoztHsdVhYkGGU+bkrxbUYzrRnmK1BQuRu8K/6dKMb5mJxvgGPDa8Eh1Z3s6jwZhS7oq1+kENky64Pgwg3rnkQDPkslYMk0EFZIyuBNOAN/8Xuf9NB7hiaI/oBwIFeqHlTVIQt4kqE9Nd61m+TQkbNNhoz2bqWHd3WLxQCkgD9KeYH6BbU=
+    secure: ykzPqkiDQNuXAWzsFsYYDznyLJih2A4d/T8jTIqktu7UoZYg0E59bgTzvG4pmTk98zh3qc5Y/fZQTyZLjQSk6vSR2L6Fr+EOCXc6OcNGdvXNzZvxmBM7LgZ0pvibMI01BhhDRwmAFv0okVoNdz7q2k3Osomy0sBSueN/+O6lRCzim+yyhBytOfLzq9Ow1YnVb2moVNinZXFrkabc6PxU49WCGpWi4zWTKTA/pY/+V/dQaqkYFt7P9uzNv6cdDoiFvDNDlyEKcapDW2rVyvxhIR1eUb3KUS8FWQQ3XPqKH8b9bfhZ4MQvCBUeKN8MYt7qizTjy1XK6pzsz71VjuZH11WVFtE4AGLdlzhftukv9tQWCYa22zG6EX+CRlHJPLPuuY54hXswQ18iPYGNYjqn7rkCMDN4W8DxxP3dBU89vlgiPX4iwkEDWipjL+k3HhR/JTQO2E3HV/B/u5xCqcC6jPddkTgd616QdPyINu8V4++cU5W12yPlp3yoGrySCXnVgCeGHtIKoMztcMTK1L77LGhlgtB/QcgHuijg/jJnmR/fPf3nN83yH6FrZ5u0rARO7BwPep+PWI+4ZANuLpAtxBgwbijJHZ+rWqjoRRDjzdc9/mB9mbXQPexO7sMzxEnA2JZe6oxqMjsaqrmhR4mI/a7bC5Vacqt05d73XDFTr0E=
